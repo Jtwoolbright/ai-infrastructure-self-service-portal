@@ -1,0 +1,32 @@
+# ai-infrastructure-self-service-portal/.gitignore
+
+# Python
+backend/venv/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Node (for when we add frontend)
+frontend/node_modules/
+frontend/build/
+frontend/.next/
+
+# Environment variables
+.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log

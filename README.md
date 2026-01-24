@@ -168,8 +168,8 @@ MIT License - See [LICENSE](LICENSE) file for details
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/Jtwoolbright)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/josh-woolbright)
+- GitHub: [@Jtwoolbright](https://github.com/Jtwoolbright)
+- LinkedIn: [linkedin.com/in/josh-woolbright](https://linkedin.com/in/josh-woolbright)
 
 ## 🙏 Acknowledgments
 

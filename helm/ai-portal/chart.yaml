@@ -1,0 +1,14 @@
+apiVersion: v2
+name: ai-portal
+description: AI Infrastructure Self-Service Portal
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - kubernetes
+  - ai
+  - platform-engineering
+  - self-service
+maintainers:
+  - name: Your Name
+    email: your.email@example.com

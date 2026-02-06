@@ -47,8 +47,8 @@ frontend:
 ingress:
   enabled: true
   className: "nginx"
-  annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  annotations: {}
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod"
   hosts:
     - host: ai-portal.yourdomain.com
       paths:
@@ -59,13 +59,8 @@ ingress:
           pathType: Prefix
           service: backend
   tls:
-    - secretName: ai-portal-tls
-      hosts:
-        - ai-portal.yourdomain.com
+    enabled: false
+    # - secretName: ai-portal-tls
+    #   hosts:
+    #     - ai-portal.yourdomain.com
 
-# Secrets - DO NOT COMMIT ACTUAL VALUES
-# Create manually: kubectl create secret generic ai-portal-secrets \
-#   --from-literal=anthropic-api-key=your_key_here \
-#   -n ai-portal
-secrets:
-  create: false  # Set to true if you want Helm to manage the secret

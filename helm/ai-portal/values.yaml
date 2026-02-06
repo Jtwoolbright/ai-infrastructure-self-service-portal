@@ -20,7 +20,6 @@ backend:
       memory: 256Mi
   
   env:
-    # ANTHROPIC_API_KEY will be set via secret
     - name: ANTHROPIC_API_KEY
       valueFrom:
         secretKeyRef:

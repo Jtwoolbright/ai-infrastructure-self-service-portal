@@ -3,8 +3,8 @@ replicaCount: 2
 
 backend:
   image:
-    repository: __AWS_ACCOUNT_ID__.dkr.ecr.__AWS_REGION__.amazonaws.com/ai-portal/backend
-    tag: "latest"
+    repository: 905417996459.dkr.ecr.us-east-1.amazonaws.com/ai-portal/frontend
+    tag: "453302fffc6ed74eaf4115c4e8196a5f57a9bb6a"
     pullPolicy: IfNotPresent
   
   service:
@@ -28,7 +28,7 @@ backend:
 
 frontend:
   image:
-    repository: __AWS_ACCOUNT_ID__.dkr.ecr.us-east-1.amazonaws.com/ai-portal/frontend
+    repository: 905417996459.dkr.ecr.us-east-1.amazonaws.com/ai-portal/frontend
     tag: "1.0.0"
     pullPolicy: IfNotPresent
   

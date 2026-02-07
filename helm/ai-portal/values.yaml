@@ -4,7 +4,7 @@ replicaCount: 2
 backend:
   image:
     repository: 905417996459.dkr.ecr.us-east-1.amazonaws.com/ai-portal/frontend
-    tag: "fc144fa111ad783a4428d4fdcc6a1de4f3f8747b"
+    tag: "latest"
     pullPolicy: IfNotPresent
   
   service:
@@ -29,7 +29,7 @@ backend:
 frontend:
   image:
     repository: 905417996459.dkr.ecr.us-east-1.amazonaws.com/ai-portal/frontend
-    tag: "1.0.0"
+    tag: "latest"
     pullPolicy: IfNotPresent
   
   service:

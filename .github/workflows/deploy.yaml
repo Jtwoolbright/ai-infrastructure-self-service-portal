@@ -57,32 +57,3 @@ jobs:
           echo "Pushing frontend image..."
           docker push $ECR_FRONTEND_REPO:$IMAGE_TAG
           docker push $ECR_FRONTEND_REPO:latest
-
-      - name: Update Helm values with new image tags
-        env:
-          IMAGE_TAG: ${{ github.sha }}
-        run: |
-          echo "Updating Helm values..."
-          
-          # Update backend image repository and tag
-          sed -i "s|repository: .*|repository: $ECR_BACKEND_REPO|g" helm/ai-portal/values.yaml
-          sed -i "0,/tag: .*/s//tag: \"$IMAGE_TAG\"/" helm/ai-portal/values.yaml
-          
-          # Update frontend image repository and tag  
-          sed -i "s|repository: .*|repository: $ECR_FRONTEND_REPO|g" helm/ai-portal/values.yaml
-          sed -i "0,/tag: .*/s//tag: \"$IMAGE_TAG\"/" helm/ai-portal/values.yaml
-
-      - name: Commit and push updated Helm values
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git add helm/ai-portal/values.yaml
-          
-          # Only commit if there are changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: update image tags to ${{ github.sha }}"
-            git push
-          fi

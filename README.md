@@ -191,8 +191,6 @@ helm/ai-portal/
 ├── templates/
 │   ├── backend-deployment.yaml       # FastAPI pods
 │   ├── frontend-deployment.yaml      # React/Nginx pods
-│   ├── backend-service.yaml          # Internal service
-│   ├── frontend-service.yaml         # Internal service
 │   ├── ingress.yaml                  # ALB routing rules
 │   ├── external-secret.yaml          # Secret sync config
 │   └── _helpers.tpl                  # Template helpers

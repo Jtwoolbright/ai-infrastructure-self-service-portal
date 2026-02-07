@@ -12,7 +12,7 @@ app = FastAPI()
 # Allow frontend to call backend (we'll build frontend next)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],  # Allow all origins (or specify your ALB DNS)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,7 +29,12 @@ class InfraRequest(BaseModel):
     cpu_limit: str = "500m"
     memory_limit: str = "512Mi"
 
-@app.get("/")
+# Health check endpoint for Kubernetes probes
+@app.get("/api/health")
+async def health():
+    return {"status": "healthy"}
+
+@app.get("/api")
 async def root():
     return {"message": "Kubernetes AI Platform Portal API", "status": "running"}
 

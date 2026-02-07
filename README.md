@@ -17,7 +17,6 @@ A full-stack application that leverages Anthropic's Claude AI to intelligently v
 
 | Skill Area | Implementation |
 |-----------|----------------|
-| **Cloud Infrastructure** | AWS EKS cluster architecture, VPC networking, ALB Ingress Controller, IAM roles with IRSA |
 | **Container Orchestration** | Kubernetes deployments, services, ingress routing, health probes, resource management |
 | **CI/CD & GitOps** | GitHub Actions pipelines, ArgoCD declarative sync, automated image builds, GitOps workflow |
 | **Security** | OIDC authentication, secret management (AWS Secrets Manager + ESO), principle of least privilege |

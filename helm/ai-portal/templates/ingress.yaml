@@ -6,26 +6,24 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "ai-portal.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
   annotations:
+    # AWS Load Balancer Controller annotations
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /health
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '15'
+    alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '5'
+    alb.ingress.kubernetes.io/healthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
+    {{- with .Values.ingress.annotations }}
     {{- toYaml . | nindent 4 }}
-  {{- end }}
+    {{- end }}
 spec:
-  {{- if .Values.ingress.className }}
   ingressClassName: {{ .Values.ingress.className }}
-  {{- end }}
-  {{- if .Values.ingress.tls.enabled }}
-  tls:
-    - hosts:
-        - {{ .Values.ingress.host }}
-      {{- if .Values.ingress.tls.secretName }}
-      secretName: {{ .Values.ingress.tls.secretName }}
-      {{- end }}
-  {{- end }}
   rules:
-    - host: {{ .Values.ingress.host }}
-      http:
+    - http:
         paths:
+          # Backend API routes - /api/* goes to backend
           - path: /api
             pathType: Prefix
             backend:
@@ -33,6 +31,8 @@ spec:
                 name: {{ include "ai-portal.fullname" . }}-backend
                 port:
                   number: {{ .Values.backend.service.port }}
+          
+          # Frontend - everything else goes to frontend (default route)
           - path: /
             pathType: Prefix
             backend:

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
-const API_URL = 'badurl'
+const API_URL = ''
 
 function App() {
   const [formData, setFormData] = useState({

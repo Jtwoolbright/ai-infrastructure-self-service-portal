@@ -46,5 +46,5 @@ frontend:
 
 ingress:
   enabled: true
-  className: alb  # Use AWS Load Balancer Controller
+  className: alb 
   annotations: {}

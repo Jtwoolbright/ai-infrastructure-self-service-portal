@@ -7,7 +7,7 @@ metadata:
     chart: {{ include "ai-portal.chart" . }}
     release: {{ .Release.Name }}
 spec:
-  revisionHistoryLimit: {{ .Values.revisionHistoryLimit | default 1 }}
+  revisionHistoryLimit: {{ .Values.revisionHistoryLimit | default 3 }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:

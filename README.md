@@ -9,7 +9,7 @@ A full-stack application that leverages Anthropic's Claude AI to intelligently v
 - **AI Integration**: Claude API integration for intelligent infrastructure validation and YAML generation
 - **Cloud-Native Architecture**: Containerized microservices deployed on AWS EKS with Helm
 - **Enterprise GitOps**: Multi-repository CI/CD with GitHub Actions, ArgoCD, and automated deployments
-- **Production Security**: OIDC authentication, AWS Secrets Manager integration, External Secrets Operator
+- **Production Security**: OIDC authentication, AWS SSM Parameter(SecureString) integration, External Secrets Operator
 - **Infrastructure as Code**: Terraform-managed AWS resources with layered architecture
 - **Zero-Downtime Deployments**: Rolling updates with health checks and automated rollback capability
 

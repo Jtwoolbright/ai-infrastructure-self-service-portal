@@ -29,11 +29,6 @@ A full-stack application that leverages Anthropic's Claude AI to intelligently v
 
 ![Image](https://github.com/user-attachments/assets/f06b1bde-2406-4f76-b3e7-04ba43075e9a)
 
-*AI-powered infrastructure validation and Kubernetes manifest generation in action*
-
-> **Live Application**: [Link to deployed app] *(if publicly accessible)*  
-> **Watch Full Demo**: [Link to YouTube/Loom] *(if you have a longer video)*
-
 ## 🏗️ Technical Architecture
 
 ### High-Level System Design
@@ -317,8 +312,5 @@ Built to showcase real-world engineering skills applicable to platform engineeri
 
 **Infrastructure Repo**: [To be added...]
 
-## 📧 Contact
 
-[Josh Woolbright]  
-[www.linkedin.com/in/josh-woolbright]
-[https://medium.com/@woolbright.josh.t]  
+📫 **Let's Connect:** [Blog](https://medium.com/@woolbright.josh.t) [LinkedIn](https://linkedin.com/in/josh-woolbright)

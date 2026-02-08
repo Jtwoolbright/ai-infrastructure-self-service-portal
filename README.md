@@ -310,7 +310,7 @@ Built to showcase real-world engineering skills applicable to platform engineeri
 
 ---
 
-**Infrastructure Repo**: [To be added...]
+**Infrastructure Repo**: [https://github.com/Jtwoolbright/terraform-eks-argocd-platform-2.0]
 
 
 📫 **Let's Connect:** [Blog](https://medium.com/@woolbright.josh.t) [LinkedIn](https://linkedin.com/in/josh-woolbright)

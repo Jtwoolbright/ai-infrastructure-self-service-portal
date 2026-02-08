@@ -27,7 +27,7 @@ A full-stack application that leverages Anthropic's Claude AI to intelligently v
 
 ## 🎬 Demo
 
-![AI Portal Demo](demo.gif)
+![Image](https://github.com/user-attachments/assets/f06b1bde-2406-4f76-b3e7-04ba43075e9a)
 
 *AI-powered infrastructure validation and Kubernetes manifest generation in action*
 
